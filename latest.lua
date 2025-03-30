@@ -12742,6 +12742,20 @@ addcmd('rvanka', {}, function(args, speaker)
         notify('Rvanka', 'Player not found!')
     end
 end)
+addcmd('heal', {}, function(args, speaker)
+    local plr = game.Players.LocalPlayer
+    if plr.Character then
+        local humanoid = plr.Character:FindFirstChild("Humanoid")
+        if humanoid then
+            humanoid.Health = humanoid.MaxHealth -- Восстанавливаем здоровье до максимума
+            notify('Heal', 'Health restored to maximum!')
+        else
+            notify('Heal', 'Humanoid not found!')
+        end
+    else
+        notify('Heal', 'Character not found!')
+    end
+end)
 addcmd('removecmd',{'deletecmd'},function(args, speaker)
 	removecmd(args[1])
 end)
