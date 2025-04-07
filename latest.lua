@@ -12736,7 +12736,7 @@ addcmd('rvanka', {}, function(args, speaker)
         -- Выполняем orbit <nick> 10 1
         execCmd('orbit ' .. target .. ' 10 1', speaker)
         -- Выполняем spin 10000
-        execCmd('spin 10000', speaker)
+        execCmd('spin 100', speaker)
         notify('Rvanka', 'Started orbiting and spinning for ' .. target)
     else
         notify('Rvanka', 'Player not found!')
